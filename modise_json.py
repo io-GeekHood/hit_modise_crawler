@@ -147,7 +147,7 @@ if __name__ == '__main__':
                 refrences.extend(media)
                 jobs_buffer = []
                 time.sleep(int(SLEEPING))
-        if glob_counter > 8:
+        if glob_counter > 1000:
             checkpoint = get_state("check")
             refrences = pd.DataFrame(refrences)
             refrences.to_parquet(f"refrences/checkpoint_{checkpoint}.parquet")
